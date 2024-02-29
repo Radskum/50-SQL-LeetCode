@@ -60,3 +60,9 @@ Output:
 | John | null  |
 | Dan  | 500   |
 +------+-------+
+Solution:
+SELECT Employee.name, Bonus.bonus
+From Employee 
+LEFT JOIN Bonus
+ON Employee.EmpId=Bonus.empId 
+WHERE Bonus.bonus < 1000 OR Bonus.bonus IS NULL;
